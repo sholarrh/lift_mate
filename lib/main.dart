@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lift_mate/presentation/onboarding/splash_screen.dart';
+
+import 'app/presentation/onboarding/splash_screen.dart';
+
 
 void main() async{
 

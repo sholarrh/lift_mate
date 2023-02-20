@@ -4,9 +4,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../../core/constants.dart';
-import '../../core/reusables.dart';
-import '../../core/size_config.dart';
+import '../../../core/constants.dart';
+import '../../../core/reusables.dart';
+import '../../../core/size_config.dart';
 import '../home/home_screen.dart';
 
 class MySplashScreen extends StatefulWidget {
