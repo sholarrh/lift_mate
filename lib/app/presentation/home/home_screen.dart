@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return  Scaffold(
       appBar: AppBar(
         title: const Text('Welcome to the driver\'s App'),

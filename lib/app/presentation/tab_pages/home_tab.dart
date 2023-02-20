@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../core/size_config.dart';
+
 class HomeTabPage extends StatefulWidget {
   const HomeTabPage({Key? key}) : super(key: key);
 
@@ -12,6 +14,7 @@ class HomeTabPage extends StatefulWidget {
 class _HomeTabPageState extends State<HomeTabPage> {
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold();
   }
 }

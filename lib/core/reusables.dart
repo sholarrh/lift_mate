@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lift_mate/core/size_config.dart';
 
-
 import 'constants.dart';
 
 Text createGeneralText({
@@ -55,8 +54,7 @@ class BuildButton extends StatelessWidget {
       width: getProportionateScreenWidth(containerWidth),
       child: ElevatedButton(
         onPressed: onPressed,
-        child:buttonChild,
-
+        child: buttonChild,
         style: ElevatedButton.styleFrom(
             elevation: 0,
             primary: buttonColor,
@@ -67,7 +65,6 @@ class BuildButton extends StatelessWidget {
     );
   }
 }
-
 
 class BuildGeneralButton extends StatelessWidget {
   BuildGeneralButton({
@@ -122,114 +119,110 @@ class BuildGeneralButton extends StatelessWidget {
   }
 }
 
-class BuildInputField extends StatefulWidget {
-  BuildInputField({
-    required this.inputController,
-    required this.inputHintText,
-    required this.inputTitleText,
-    required this.keyboardType,
-    this.maxLength,
-    required this.isObscured,
-  });
+// class BuildInputField extends StatefulWidget {
+//   BuildInputField({
+//     required this.inputController,
+//     required this.inputHintText,
+//     required this.inputTitleText,
+//     required this.keyboardType,
+//     this.maxLength,
+//     required this.isObscured,
+//   });
+//
+//   TextEditingController inputController;
+//   String inputHintText;
+//   String inputTitleText;
+//   TextInputType keyboardType;
+//   int? maxLength;
+//   bool isObscured;
+//
+//   @override
+//   State<BuildInputField> createState() => _BuildInputFieldState();
+// }
+//
+// class _BuildInputFieldState extends State<BuildInputField> {
+//   bool isPressed = false;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       crossAxisAlignment: CrossAxisAlignment.start,
+//       children: [
+//         isPressed
+//             ? SizedBox()
+//             : Padding(
+//                 padding: EdgeInsets.only(left: getProportionateScreenWidth(10)),
+//                 child: createGeneralText(
+//                     inputText: widget.inputTitleText,
+//                     fontSize: 20,
+//                     family: FontFamily.interRegular,
+//                     weight: FontWeight.w500,
+//                     colorName: Palette.blackColor),
+//               ),
+//         SizedBox(
+//           height: getProportionateScreenHeight(9),
+//         ),
+//         SizedBox(
+//           height: getProportionateScreenHeight(48),
+//           child: TextFormField(
+//             cursorColor: Palette.greyColor,
+//             controller: widget.inputController,
+//             keyboardType: widget.keyboardType,
+//             enabled: true,
+//             maxLength: widget.maxLength,
+//             autovalidateMode: AutovalidateMode.disabled,
+//             validator: (value) =>
+//                 value!.isEmpty ? 'Enter ${widget.inputTitleText}' : null,
+//             onChanged: (value) {
+//               setState(() {
+//                 if (value.isEmpty) {
+//                   isPressed = false;
+//                 } else {
+//                   isPressed = true;
+//                 }
+//               });
+//             },
+//             obscureText: widget.isObscured ? true : false,
+//             decoration: InputDecoration(
+//                 counterText: '',
+//                 contentPadding: EdgeInsets.symmetric(
+//                   horizontal: getProportionateScreenWidth(14),
+//                 ),
+//                 labelText: widget.inputTitleText,
+//                 labelStyle: TextStyle(
+//                     fontSize: getProportionateScreenWidth(16),
+//                     fontFamily: FontFamily.interMedium,
+//                     fontWeight: FontWeight.w500,
+//                     color: Palette.blackColor),
+//                 hintText: widget.inputHintText,
+//                 hintStyle: TextStyle(
+//                     fontSize: getProportionateScreenWidth(16),
+//                     fontFamily: FontFamily.interRegular,
+//                     fontWeight: FontWeight.w400,
+//                     color: Palette.greyColor),
+//                 filled: true,
+//                 fillColor: Palette.whiteColor,
+//                 focusColor: Palette.primaryColor,
+//                 focusedBorder: OutlineInputBorder(
+//                   borderSide: BorderSide(color: Palette.primaryColor),
+//                 ),
+//                 enabledBorder: OutlineInputBorder(
+//                   borderSide: BorderSide(color: Palette.greyColor),
+//                 ),
+//                 border: OutlineInputBorder(
+//                   borderSide: BorderSide.none,
+//                   borderRadius: BorderRadius.all(Radius.circular(8)),
+//                 )),
+//           ),
+//         )
+//       ],
+//     );
+//   }
+// }
 
-  TextEditingController inputController;
-  String inputHintText;
-  String inputTitleText;
-  TextInputType keyboardType;
-  int? maxLength;
-  bool isObscured;
-
-  @override
-  State<BuildInputField> createState() => _BuildInputFieldState();
-}
-
-class _BuildInputFieldState extends State<BuildInputField> {
-  bool isPressed = false;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        isPressed
-            ? SizedBox(
-
-        )
-            : Padding(
-          padding: EdgeInsets.only(left: getProportionateScreenWidth(10)),
-          child: createGeneralText(
-              inputText: widget.inputTitleText,
-              fontSize: 20,
-              family: FontFamily.interRegular,
-              weight: FontWeight.w500,
-              colorName: Palette.blackColor),
-        ),
-        SizedBox(
-          height: getProportionateScreenHeight(9),
-        ),
-        SizedBox(
-          height: getProportionateScreenHeight(48),
-          child: TextFormField(
-            cursorColor: Palette.greyColor,
-            controller: widget.inputController,
-            keyboardType: widget.keyboardType,
-            enabled: true,
-            maxLength: widget.maxLength,
-            autovalidateMode: AutovalidateMode.disabled,
-            validator: (value) =>
-            value!.isEmpty ? 'Enter ${widget.inputTitleText}' : null,
-            onChanged: (value) {
-              setState(() {
-                if (value.isEmpty) {
-                  isPressed = false;
-                } else  {
-
-                  isPressed = true;
-                }
-              });
-            },
-            obscureText: widget.isObscured ? true : false,
-            decoration: InputDecoration(
-                counterText: '',
-                contentPadding: EdgeInsets.symmetric(
-                  horizontal: getProportionateScreenWidth(14),
-                ),
-                labelText: widget.inputTitleText,
-                labelStyle: TextStyle(
-                    fontSize: getProportionateScreenWidth(16),
-                    fontFamily: FontFamily.interMedium,
-                    fontWeight: FontWeight.w500,
-                    color: Palette.blackColor),
-                hintText: widget.inputHintText,
-                hintStyle: TextStyle(
-                    fontSize: getProportionateScreenWidth(16),
-                    fontFamily: FontFamily.interRegular,
-                    fontWeight: FontWeight.w400,
-                    color: Palette.greyColor),
-                filled: true,
-                fillColor: Palette.whiteColor,
-                focusColor: Palette.primaryColor,
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Palette.primaryColor),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Palette.greyColor),
-                ),
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                )),
-          ),
-        )
-      ],
-    );
-  }
-}
-
-
-warningSnackBar(
-    {required BuildContext context,
-      required String message,
-    }) {
+warningSnackBar({
+  required BuildContext context,
+  required String message,
+}) {
   return ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       content: Text(
@@ -246,10 +239,10 @@ warningSnackBar(
   );
 }
 
-successSnackBar(
-    {required BuildContext context,
-      required String message,
-    }) {
+successSnackBar({
+  required BuildContext context,
+  required String message,
+}) {
   return ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       content: Text(
@@ -266,10 +259,10 @@ successSnackBar(
   );
 }
 
-failureSnackBar(
-    {required BuildContext context,
-      required String message,
-    }) {
+failureSnackBar({
+  required BuildContext context,
+  required String message,
+}) {
   return ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       content: Text(
@@ -285,4 +278,3 @@ failureSnackBar(
     ),
   );
 }
-

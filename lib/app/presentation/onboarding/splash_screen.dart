@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import '../../../core/constants.dart';
 import '../../../core/reusables.dart';
 import '../../../core/size_config.dart';
+import '../auth/signup_screen.dart';
 import '../home/home_screen.dart';
 
 class MySplashScreen extends StatefulWidget {
@@ -27,7 +28,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
+              builder: (context) => const SignUpScreen(),
             ),
           ),
     );

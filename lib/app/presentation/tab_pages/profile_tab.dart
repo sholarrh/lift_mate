@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../core/size_config.dart';
+
 class ProfileTabPage extends StatefulWidget {
   const ProfileTabPage({Key? key}) : super(key: key);
 
@@ -11,6 +13,7 @@ class ProfileTabPage extends StatefulWidget {
 class _ProfileTabPageState extends State<ProfileTabPage> {
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold();
   }
 }
